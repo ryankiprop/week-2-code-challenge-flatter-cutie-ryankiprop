@@ -40,5 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       selectedCharacter.votes = 0;
       document.getElementById("vote-count").innerText = 0;
+
+    updateVotesOnServer(selectedCharacter.id, 0);
   });
 });
