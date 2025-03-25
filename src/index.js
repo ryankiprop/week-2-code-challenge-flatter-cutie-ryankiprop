@@ -43,4 +43,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     updateVotesOnServer(selectedCharacter.id, 0);
   });
+
+  function updateVotesOnServer(characterId, newVotes) {
+      fetch(`${baseURL}/${characterId}`, {
+          method: "PATCH",
+          headers: {
+              "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+              votes: newVotes
+          })
+   
+});
 });
